@@ -12,9 +12,9 @@ public static class ServiceCollectionExtensions
     /// </summary>
     /// <param name="services">The service collection to add the client to.</param>
     /// <returns>The service collection for chaining.</returns>
-    public static IServiceCollection AddKaspiShopOffersClient(this IServiceCollection services)
+    public static IServiceCollection AddKaspiShopClient(this IServiceCollection services)
     {
-        return services.AddKaspiShopOffersClient(_ => { });
+        return services.AddKaspiShopClient(_ => { });
     }
 
     /// <summary>
@@ -23,7 +23,7 @@ public static class ServiceCollectionExtensions
     /// <param name="services">The service collection to add the client to.</param>
     /// <param name="configureOptions">Action to configure the client options.</param>
     /// <returns>The service collection for chaining.</returns>
-    public static IServiceCollection AddKaspiShopOffersClient(
+    public static IServiceCollection AddKaspiShopClient(
         this IServiceCollection services,
         Action<KaspiShopClientOptions> configureOptions)
     {
@@ -59,10 +59,10 @@ public static class ServiceCollectionExtensions
     /// <param name="services">The service collection to add the client to.</param>
     /// <param name="authToken">The authentication token to use for API requests.</param>
     /// <returns>The service collection for chaining.</returns>
-    public static IServiceCollection AddKaspiShopOffersClient(
+    public static IServiceCollection AddKaspiShopClient(
         this IServiceCollection services,
         string authToken)
     {
-        return services.AddKaspiShopOffersClient(options => options.AuthToken = authToken);
+        return services.AddKaspiShopClient(options => options.AuthToken = authToken);
     }
 }
