@@ -13,9 +13,7 @@ public class AuthenticationHandler : DelegatingHandler
 
     public AuthenticationHandler(
         ILogger<AuthenticationHandler> logger,
-        IOptions<KaspiShopClientOptions> options,
-        HttpMessageHandler? innerHandler = null)
-        : base(innerHandler ?? new HttpClientHandler())
+        IOptions<KaspiShopClientOptions> options)
     {
         _logger = logger;
         _options = options.Value;

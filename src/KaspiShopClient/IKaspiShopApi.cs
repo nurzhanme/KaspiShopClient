@@ -16,7 +16,7 @@ public interface IKaspiShopApi
     /// <param name="categoryCode">Код категории товаров (например, "Master - Exercise notebooks"). Не должен быть пустым или null.</param>
     /// <returns>Задача, возвращающая список объектов <see cref="ProductAttribute"/>, представляющих характеристики категории.</returns>
     /// <exception cref="ApiException">Вызывается при сбое запроса API (например, из-за неверного кода категории или ошибки аутентификации).</exception>
-    [Get("products/classification/attributes?c={categoryCode}")]
+    [Get("/products/classification/attributes?c={categoryCode}")]
     Task<List<ProductAttribute>> GetProductAttributesAsync(string categoryCode);
 
     /// <summary>
@@ -27,7 +27,7 @@ public interface IKaspiShopApi
     /// <param name="attributeCode">Код характеристики (например, "Exercise notebooks*Obsie harakteristiki.exercise notebooks*cover"). Не должен быть пустым или null.</param>
     /// <returns>Задача, возвращающая список объектов <see cref="ProductAttributeValue"/>, представляющих возможные значения характеристики.</returns>
     /// <exception cref="ApiException">Вызывается при сбое запроса API (например, из-за неверного кода категории или характеристики, или ошибки аутентификации).</exception>
-    [Get("products/classification/attribute/values?c={categoryCode}&a={attributeCode}")]
+    [Get("/products/classification/attribute/values?c={categoryCode}&a={attributeCode}")]
     Task<List<ProductAttributeValue>> GetProductAttributeValuesAsync(
         string categoryCode,
         string attributeCode);

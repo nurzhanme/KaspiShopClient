@@ -3,8 +3,8 @@ using Microsoft.Extensions.Logging;
 
 namespace KaspiShopClient.Handlers;
 
-public class LoggingHandler(ILogger<LoggingHandler> logger, HttpMessageHandler innerHandler)
-    : DelegatingHandler(innerHandler ?? new HttpClientHandler())
+public class LoggingHandler(ILogger<LoggingHandler> logger)
+    : DelegatingHandler
 {
     private readonly Stopwatch _stopwatch = new();
 
