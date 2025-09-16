@@ -15,7 +15,7 @@ public interface IKaspiShopApi
     /// </summary>
     /// <returns>Задача, возвращающая список объектов <see cref="ProductCategory"/>, представляющих категории товаров и их коды.</returns>
     /// <exception cref="ApiException">Вызывается при сбое запроса API (например, из-за ошибки аутентификации).</exception>
-    [Get("/api/products/classification/categories")]
+    [Get("/products/classification/categories")]
     Task<List<ProductCategory>> GetProductCategoriesAsync();
     
     /// <summary>
