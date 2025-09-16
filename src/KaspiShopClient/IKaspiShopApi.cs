@@ -1,13 +1,12 @@
-﻿using KaspiShopClient.Models;
+﻿﻿using KaspiShopClient.Models;
 using Refit;
 
 namespace KaspiShopClient;
 
 /// <summary>
 /// Определяет методы для взаимодействия с API магазина Kaspi.kz, включая получение характеристик товаров и их возможных значений.
-/// Все запросы включают заголовок X-Auth-Token для аутентификации.
+/// Все запросы включают заголовок X-Auth-Token для аутентификации, который добавляется автоматически через AuthenticationHandler.
 /// </summary>
-[Headers("X-Auth-Token")]
 public interface IKaspiShopApi
 {
     /// <summary>
