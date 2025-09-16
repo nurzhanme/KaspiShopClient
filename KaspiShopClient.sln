@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaspiShopClient", "src\Kasp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3A4C0988-683A-4C0A-BF60-D662A4A60A4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSample", "src\WebApiSample\WebApiSample.csproj", "{DF2D9013-8B65-472E-8F81-6B579B2E6439}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,8 +16,13 @@ Global
 		{982B28CA-7C44-4869-A897-A544387DD57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{982B28CA-7C44-4869-A897-A544387DD57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{982B28CA-7C44-4869-A897-A544387DD57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2D9013-8B65-472E-8F81-6B579B2E6439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2D9013-8B65-472E-8F81-6B579B2E6439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2D9013-8B65-472E-8F81-6B579B2E6439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2D9013-8B65-472E-8F81-6B579B2E6439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{982B28CA-7C44-4869-A897-A544387DD57B} = {3A4C0988-683A-4C0A-BF60-D662A4A60A4C}
+		{DF2D9013-8B65-472E-8F81-6B579B2E6439} = {3A4C0988-683A-4C0A-BF60-D662A4A60A4C}
 	EndGlobalSection
 EndGlobal

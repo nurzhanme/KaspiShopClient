@@ -1,0 +1,33 @@
+@WebApiSample_HostAddress = http://localhost:5002
+
+# Kaspi Shop API Samples
+
+# Get product attributes for a category
+# Example: Smartphones category
+GET {{WebApiSample_HostAddress}}/kaspi/product-attributes/Master - Smartphones
+Accept: application/json
+
+###
+
+# Get attribute values for a specific attribute
+# Note: You need to get valid attributeCode from the previous request
+# Example attribute code format: "Smartphones*Type"
+GET {{WebApiSample_HostAddress}}/kaspi/attribute-values/Master - Smartphones/Smartphones*Type
+Accept: application/json
+
+###
+
+# Get product attributes for a category
+# Example: Condoms category
+GET {{WebApiSample_HostAddress}}/kaspi/product-attributes/Master - Condoms
+Accept: application/json
+
+###
+
+# Get attribute values for a specific attribute
+# Note: You need to get valid attributeCode from the previous request
+# Example attribute code format: "Condoms*Condom type"
+GET {{WebApiSample_HostAddress}}/kaspi/attribute-values/Master - Condoms/Condoms*Condom type
+Accept: application/json
+
+###
