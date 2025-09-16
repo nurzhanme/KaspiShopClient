@@ -2,6 +2,13 @@
 
 # Kaspi Shop API Samples
 
+# Get all product categories
+# This endpoint fetches all available product categories
+GET {{WebApiSample_HostAddress}}/kaspi/product-categories
+Accept: application/json
+
+###
+
 # Get product attributes for a category
 # Example: Smartphones category
 GET {{WebApiSample_HostAddress}}/kaspi/product-attributes/Master - Smartphones

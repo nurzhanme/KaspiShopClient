@@ -22,6 +22,31 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Sample endpoint to get all product categories
+app.MapGet("/kaspi/product-categories", async (IKaspiShopApi kaspiApi) =>
+    {
+        try
+        {
+            var categories = await kaspiApi.GetProductCategoriesAsync();
+            return Results.Ok(new
+            {
+                CategoryCount = categories.Count,
+                Categories = categories.Take(20) // Limit to first 20 for display
+            });
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem(
+                detail: ex.Message,
+                title: "Error fetching product categories",
+                statusCode: 500
+            );
+        }
+    })
+    .WithName("GetProductCategories")
+    .WithSummary("Get all product categories")
+    .WithDescription("Fetches all available product categories from Kaspi Shop API.");
+
 // Sample endpoint to demonstrate getting product attributes
 app.MapGet("/kaspi/product-attributes/{categoryCode}", async (string categoryCode, IKaspiShopApi kaspiApi) =>
     {
