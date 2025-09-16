@@ -10,6 +10,15 @@ namespace KaspiShopClient;
 public interface IKaspiShopApi
 {
     /// <summary>
+    /// Получает список категорий товаров из API магазина Kaspi.kz для добавления товаров.
+    /// <see href="https://guide.kaspi.kz/partner/ru/shop/api/goods/q3216">Официальная документация API Kaspi.kz</see>
+    /// </summary>
+    /// <returns>Задача, возвращающая список объектов <see cref="ProductCategory"/>, представляющих категории товаров и их коды.</returns>
+    /// <exception cref="ApiException">Вызывается при сбое запроса API (например, из-за ошибки аутентификации).</exception>
+    [Get("/api/products/classification/categories")]
+    Task<List<ProductCategory>> GetProductCategoriesAsync();
+    
+    /// <summary>
     /// Получает список характеристик для указанной категории товаров из API магазина Kaspi.kz.
     /// <see cref="https://guide.kaspi.kz/partner/ru/shop/api/goods/q3217">Официальная документация API Kaspi.kz</see>
     /// </summary>
