@@ -1,4 +1,4 @@
-﻿﻿using KaspiShopClient.Models;
+﻿using KaspiShopClient.Models;
 using Refit;
 
 namespace KaspiShopClient;

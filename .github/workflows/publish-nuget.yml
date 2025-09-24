@@ -1,0 +1,37 @@
+name: Publish NuGet Package
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual trigger for testing
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Required for semantic-version to analyze all history
+    - name: Determine Semantic Version
+      id: semantic_version
+      uses: paulhatch/semantic-version@v4.0.3
+      with:
+        tag_prefix: "" # No 'v' prefix for NuGet packages
+        format: "${major}.${minor}.${patch}" # Standard NuGet version format
+        # Default patterns for conventional commits are usually sufficient
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x' # Or your desired .NET version
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Pack NuGet package
+      # Use the version determined by semantic-version
+      run: dotnet pack src/KaspiShopClient/KaspiShopClient.csproj --configuration Release --no-build --output . /p:Version=${{ steps.semantic_version.outputs.version }}
+    - name: Publish NuGet package
+      # Only publish if a new version was generated
+      if: steps.semantic_version.outputs.changed == 'true'
+      run: dotnet nuget push "*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

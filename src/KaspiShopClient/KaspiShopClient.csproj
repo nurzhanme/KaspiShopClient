@@ -1,9 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        
+        <!-- Package Information -->
+        <PackageId>KaspiShopClient</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Nurzhan Aitbayev</Authors>
+        <Product>KaspiShopClient</Product>
+        <Description>A .NET client library for interacting with the Kaspi.kz Shop API. Provides easy access to product categories, attributes, and attribute values with built-in authentication and error handling.</Description>
+        <PackageTags>kaspi;api;client;shop;ecommerce;kazakhstan</PackageTags>
+        <PackageProjectUrl>https://github.com/nurzhanme/KaspiShopClient</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nurzhanme/KaspiShopClient</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageReleaseNotes>Initial release of KaspiShopClient with support for product categories, attributes, and attribute values API endpoints.</PackageReleaseNotes>
+        
+        <!-- Generate package on build -->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        
+        <!-- Documentation -->
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+        <TargetFrameworks>netstandard2.1;net8.0;net9.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
