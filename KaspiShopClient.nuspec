@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>KaspiShopClient</id>
+    <version>1.0.0</version>
+    <authors>Nurzhan Aitbayev</authors>
+    <owners>Nurzhan Aitbayev</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/nurzhanme/KaspiShopClient</projectUrl>
+    <description>A .NET client library for interacting with the Kaspi.kz Shop API. Provides easy access to product categories, attributes, and attribute values with built-in authentication and error handling.</description>
+    <releaseNotes>Initial release of KaspiShopClient with support for product categories, attributes, and attribute values API endpoints.</releaseNotes>
+    <copyright>Copyright © 2024</copyright>
+    <tags>kaspi api client shop ecommerce kazakhstan</tags>
+    <repository type="git" url="https://github.com/nurzhanme/KaspiShopClient" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="Refit.HttpClientFactory" version="8.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="src\KaspiShopClient\bin\Release\net9.0\KaspiShopClient.dll" target="lib\net9.0\KaspiShopClient.dll" />
+    <file src="src\KaspiShopClient\bin\Release\net9.0\KaspiShopClient.xml" target="lib\net9.0\KaspiShopClient.xml" />
+    <file src="README.md" target="" />
+    <file src="LICENSE" target="" />
+    <file src="TOKEN_AUTHENTICATION.md" target="" />
+  </files>
+</package>
