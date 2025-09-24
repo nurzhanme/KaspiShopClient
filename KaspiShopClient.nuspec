@@ -19,11 +19,8 @@
       <group targetFramework="net8.0">
         <dependency id="Refit.HttpClientFactory" version="8.0.0" />
       </group>
-      <group targetFramework="netstandard2.0">
-        <!-- No dependencies required for netstandard2.0 -->
-      </group>
       <group targetFramework="netstandard2.1">
-        <!-- No dependencies required for netstandard2.1 -->
+        <dependency id="Refit.HttpClientFactory" version="8.0.0" />
       </group>
     </dependencies>
   </metadata>
@@ -32,8 +29,6 @@
     <file src="src\KaspiShopClient\bin\Release\net9.0\KaspiShopClient.xml" target="lib\net9.0\KaspiShopClient.xml" />
     <file src="src\KaspiShopClient\bin\Release\net8.0\KaspiShopClient.dll" target="lib\net8.0\KaspiShopClient.dll" />
     <file src="src\KaspiShopClient\bin\Release\net8.0\KaspiShopClient.xml" target="lib\net8.0\KaspiShopClient.xml" />
-    <file src="src\KaspiShopClient\bin\Release\netstandard2.0\KaspiShopClient.dll" target="lib\netstandard2.0\KaspiShopClient.dll" />
-    <file src="src\KaspiShopClient\bin\Release\netstandard2.0\KaspiShopClient.xml" target="lib\netstandard2.0\KaspiShopClient.xml" />
     <file src="src\KaspiShopClient\bin\Release\netstandard2.1\KaspiShopClient.dll" target="lib\netstandard2.1\KaspiShopClient.dll" />
     <file src="src\KaspiShopClient\bin\Release\netstandard2.1\KaspiShopClient.xml" target="lib\netstandard2.1\KaspiShopClient.xml" />
     <file src="README.md" target="" />
