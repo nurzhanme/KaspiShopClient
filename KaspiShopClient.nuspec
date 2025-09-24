@@ -10,7 +10,6 @@
     <projectUrl>https://github.com/nurzhanme/KaspiShopClient</projectUrl>
     <description>A .NET client library for interacting with the Kaspi.kz Shop API. Provides easy access to product categories, attributes, and attribute values with built-in authentication and error handling.</description>
     <releaseNotes>Initial release of KaspiShopClient with support for product categories, attributes, and attribute values API endpoints.</releaseNotes>
-    <copyright>Copyright © 2024</copyright>
     <tags>kaspi api client shop ecommerce kazakhstan</tags>
     <repository type="git" url="https://github.com/nurzhanme/KaspiShopClient" />
     <dependencies>
