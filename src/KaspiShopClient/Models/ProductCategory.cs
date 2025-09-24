@@ -6,14 +6,17 @@ namespace KaspiShopClient.Models;
 /// Представляет категорию товаров в API магазина Kaspi.kz, включая её код и название.
 /// <see href="https://guide.kaspi.kz/partner/ru/shop/api/goods/q3216">Официальная документация API Kaspi.kz</see>
 /// </summary>
-public record ProductCategory(
+public class ProductCategory
+{
     /// <summary>
     /// Уникальный код категории для API-запросов (например, "Master - Exercise notebooks").
     /// </summary>
-    [property: JsonPropertyName("code")] string Code,
-
+    [JsonPropertyName("code")]
+    public string Code { get; set; }
+ 
     /// <summary>
     /// Название категории в магазине Kaspi.kz (например, "Тетради").
     /// </summary>
-    [property: JsonPropertyName("title")] string Title
-);
+    [JsonPropertyName("title")]
+    public string Title { get; set; }
+}

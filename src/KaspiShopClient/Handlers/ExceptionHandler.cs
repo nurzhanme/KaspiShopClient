@@ -2,8 +2,19 @@ using Microsoft.Extensions.Logging;
 
 namespace KaspiShopClient.Handlers;
 
-public class ExceptionHandler(ILogger<ExceptionHandler> logger) : DelegatingHandler
+public class ExceptionHandler : DelegatingHandler
 {
+    private readonly ILogger<ExceptionHandler> _logger;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="logger"></param>
+    public ExceptionHandler(ILogger<ExceptionHandler> logger)
+    {
+        _logger = logger;
+    }
+
     protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
         CancellationToken cancellationToken)
     {
@@ -13,7 +24,7 @@ public class ExceptionHandler(ILogger<ExceptionHandler> logger) : DelegatingHand
         }
         catch (Exception e)
         {
-            logger.LogError(e.Message);
+            _logger.LogError(e.Message);
             throw;
         }
     }
