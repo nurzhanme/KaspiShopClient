@@ -151,7 +151,10 @@ Configure logging levels in your application to control verbosity.
 
 ## Requirements
 
-- .NET 9.0 or later
+- **.NET 9.0** (STS)
+- **.NET 8.0** (LTS)
+- **.NET Standard 2.1**
+- **.NET Standard 2.0**
 - Valid Kaspi.kz Shop API authentication token
 
 ## Documentation
