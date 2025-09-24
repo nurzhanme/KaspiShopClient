@@ -7,9 +7,9 @@ public class ExceptionHandler : DelegatingHandler
     private readonly ILogger<ExceptionHandler> _logger;
 
     /// <summary>
-    /// 
+    /// Initializes a new instance of the <see cref="ExceptionHandler"/> class.
     /// </summary>
-    /// <param name="logger"></param>
+    /// <param name="logger">The logger used to log exception details.</param>
     public ExceptionHandler(ILogger<ExceptionHandler> logger)
     {
         _logger = logger;
