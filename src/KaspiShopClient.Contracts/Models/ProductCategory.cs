@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace KaspiShopClient.Models;
+namespace KaspiShopClient.Contracts.Models;
 
 /// <summary>
 /// Представляет категорию товаров в API магазина Kaspi.kz, включая её код и название.

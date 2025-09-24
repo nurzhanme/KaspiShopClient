@@ -25,6 +25,20 @@ Or via Package Manager Console:
 Install-Package KaspiShopClient
 ```
 
+### For Models/Contracts (KaspiShopClient.Contracts)
+
+If you only need the contract models without the client functionality, you can install the `KaspiShopClient.Contracts` package separately:
+
+```bash
+dotnet add package KaspiShopClient.Contracts
+```
+
+Or via Package Manager Console:
+
+```powershell
+Install-Package KaspiShopClient.Contracts
+```
+
 ## Quick Start
 
 ### 1. Basic Setup
