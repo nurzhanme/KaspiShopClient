@@ -6,7 +6,7 @@ namespace KaspiShopClient.Contracts.Models;
 /// Представляет характеристику категории товаров в API магазина Kaspi.kz, включая её код, тип и ограничения.
 /// <see cref="https://guide.kaspi.kz/partner/ru/shop/api/goods/q3217">Официальная документация API Kaspi.kz</see>
 /// </summary>
-public class ProductAttribute
+public record ProductAttribute
 {
     /// <summary>
     /// Уникальный код, идентифицирующий характеристику (например, "Exercise notebooks*Obsie harakteristiki.exercise notebooks*cover").
