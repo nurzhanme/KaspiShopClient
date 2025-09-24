@@ -23,6 +23,8 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
         <TargetFrameworks>netstandard2.1;net8.0;net9.0</TargetFrameworks>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -32,5 +34,10 @@
     <ItemGroup>
       <ProjectReference Include="..\KaspiShopClient.Contracts\KaspiShopClient.Contracts.csproj" />
     </ItemGroup>
-
-</Project>
+    
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    
+    </Project>
