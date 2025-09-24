@@ -17,7 +17,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageReleaseNotes>Initial release of KaspiShopClient with support for product categories, attributes, and attribute values API endpoints.</PackageReleaseNotes>
+        <PackageReleaseNotes>Initial release of KaspiShopClient.Contracts, providing models and DTOs for product categories, attributes, and attribute values.</PackageReleaseNotes>
 
         <!-- Generate package on build -->
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
