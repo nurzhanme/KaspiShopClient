@@ -19,7 +19,7 @@ public class LoggingHandler : DelegatingHandler
         _stopwatch.Start();
 
         var response = await base.SendAsync(request, cancellationToken);
-        var content = await response.Content.ReadAsStringAsync();
+        var content = await response.Content.ReadAsStringAsync(cancellationToken);
             
         _stopwatch.Stop();
         _logger.LogInformation($"Request to {request.RequestUri} completed in {_stopwatch.ElapsedMilliseconds} ms");
