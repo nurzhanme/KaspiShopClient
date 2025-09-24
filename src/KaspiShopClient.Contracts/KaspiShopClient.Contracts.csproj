@@ -4,26 +4,26 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10.0</LangVersion>
-        
+
         <!-- Package Information -->
-        <PackageId>KaspiShopClient</PackageId>
+        <PackageId>KaspiShopClient.Contracts</PackageId>
         <Version>1.0.0</Version>
         <Authors>Nurzhan Aitbayev</Authors>
-        <Product>KaspiShopClient</Product>
-        <Description>A .NET client library for interacting with the Kaspi.kz Shop API. Provides easy access to product categories, attributes, and attribute values with built-in authentication and error handling.</Description>
+        <Product>KaspiShopClient.Contracts</Product>
+        <Description>Contract models for data transfer with the Kaspi.kz Shop API. Includes data structures for product categories, attributes, and attribute values.</Description>
         <PackageTags>kaspi;api;client;shop;ecommerce;kazakhstan</PackageTags>
         <PackageProjectUrl>https://github.com/nurzhanme/KaspiShopClient</PackageProjectUrl>
         <RepositoryUrl>https://github.com/nurzhanme/KaspiShopClient</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageReleaseNotes>Initial release of KaspiShopClient with support for product categories, attributes, and attribute values API endpoints.</PackageReleaseNotes>
-        
+        <PackageReleaseNotes>Initial release of KaspiShopClient.Contracts, providing models and DTOs for product categories, attributes, and attribute values.</PackageReleaseNotes>
+
         <!-- Generate package on build -->
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        
+
         <!-- Documentation -->
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -31,11 +31,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\KaspiShopClient.Contracts\KaspiShopClient.Contracts.csproj" />
+        <PackageReference Include="System.Text.Json" Version="8.0.0" />
     </ItemGroup>
 
 </Project>

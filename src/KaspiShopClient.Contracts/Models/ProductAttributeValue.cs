@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace KaspiShopClient.Models;
+namespace KaspiShopClient.Contracts.Models;
 
 /// <summary>
 /// Представляет возможное значение характеристики товара в API магазина Kaspi.kz, включая его код и отображаемое имя.
