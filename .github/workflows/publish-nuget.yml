@@ -41,5 +41,5 @@ jobs:
         dotnet pack src/KaspiShopClient/KaspiShopClient.csproj --configuration Release --output . /p:Version=${{ steps.gitversion.outputs.SemVer }}
     - name: Publish NuGet package
       # Only publish if a new version was generated
-      if: steps.semantic_version.outputs.changed == 'true'
+      if: steps.gitversion.outputs.CommitsSinceVersionSource != '0'
       run: dotnet nuget push "*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
