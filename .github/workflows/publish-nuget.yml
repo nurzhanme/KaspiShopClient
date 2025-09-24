@@ -37,8 +37,7 @@ jobs:
     - name: Pack NuGet package
       # Use the version determined by semantic-version
       run: |
-        dotnet pack src/KaspiShopClient.Contracts/KaspiShopClient.Contracts.csproj --configuration Release --output . /p:Version=${{ steps.gitversion.outputs.SemVer }}
-        dotnet pack src/KaspiShopClient/KaspiShopClient.csproj --configuration Release --output . /p:Version=${{ steps.gitversion.outputs.SemVer }}
+        dotnet pack KaspiShopClient.nuspec --configuration Release --output . /p:Version=${{ steps.gitversion.outputs.SemVer }}
     - name: Publish NuGet package
       # Only publish if a new version was generated
       if: steps.gitversion.outputs.CommitsSinceVersionSource != '0'
