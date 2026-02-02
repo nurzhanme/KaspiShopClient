@@ -17,16 +17,6 @@ public static class ServiceCollectionExtensions
         return services.AddKaspiShopClient(_ => { });
     }
 
-    /// <summary>
-    /// Adds the Kaspi Shop API client to the service collection with default configuration.
-    /// </summary>
-    /// <param name="services">The service collection to add the client to.</param>
-    /// <returns>The service collection for chaining.</returns>
-    [Obsolete("Use AddKaspiShopClient instead")]
-    public static IServiceCollection AddKaspiShopOffersClient(this IServiceCollection services)
-    {
-        return services.AddKaspiShopClient(_ => { });
-    }
 
     /// <summary>
     /// Adds the Kaspi Shop API client to the service collection with custom configuration.
@@ -75,31 +65,4 @@ public static class ServiceCollectionExtensions
         return services.AddKaspiShopClient(options => options.AuthToken = authToken);
     }
 
-    /// <summary>
-    /// Adds the Kaspi Shop API client to the service collection with custom configuration.
-    /// </summary>
-    /// <param name="services">The service collection to add the client to.</param>
-    /// <param name="configureOptions">Action to configure the client options.</param>
-    /// <returns>The service collection for chaining.</returns>
-    [Obsolete("Use AddKaspiShopClient instead")]
-    public static IServiceCollection AddKaspiShopOffersClient(
-        this IServiceCollection services,
-        Action<KaspiShopClientOptions> configureOptions)
-    {
-        return services.AddKaspiShopClient(configureOptions);
-    }
-
-    /// <summary>
-    /// Adds the Kaspi Shop API client to the service collection with a specific authentication token.
-    /// </summary>
-    /// <param name="services">The service collection to add the client to.</param>
-    /// <param name="authToken">The authentication token to use for API requests.</param>
-    /// <returns>The service collection for chaining.</returns>
-    [Obsolete("Use AddKaspiShopClient instead")]
-    public static IServiceCollection AddKaspiShopOffersClient(
-        this IServiceCollection services,
-        string authToken)
-    {
-        return services.AddKaspiShopClient(authToken);
-    }
 }
